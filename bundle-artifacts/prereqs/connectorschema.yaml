@@ -13,7 +13,7 @@ spec:
     - apiType: AsyncAPI
       name: connector
   documentation: >- # change the documentation reference
-    https://www.ibm.com/docs/en/cloud-paks/cp-waiops/3.1.1?topic=integrations-configuring-ticketing-integration
+    https://www.ibm.com/docs/en/cloud-paks/cloud-pak-aiops/4.10.1?topic=integrations-outgoing
   permissions:
     channels:
       - name: cp4waiops-cartridge.lifecycle.input.events # To create alerts
@@ -211,7 +211,9 @@ spec:
         label: "{{connector.common.form.data_flow.label}}"
         labelOff: "{{common.Off}}"
         labelOn: "{{common.On}}"
-        headerLabel: "{{connector.common.form.ticketCollection.headerLabel}}"
+        # headerLabel: "{{connector.common.form.ticketCollection.headerLabel}}"
+        headerLabel: |
+          First, specify whether you want to use live or historical ticket data when training the Change risk and Similar tickets algorithms. When using live data, you can also specify whether change risk assessments are performed, and define how alert and incident data is synchronized from SMAX to Cloud Pak for AIOps (Incident data is continuously synchronized from Cloud Pak for AIOps to SMAX). You can also enable and disable collection of all data from SMAX. Additional setup may be required before using this integration.
         apiMapping: connection_config.data_flow
         formStep: collectTickets
       - id: dynamic_schedule_form
@@ -229,12 +231,14 @@ spec:
               - id: issueSamplingRate
                 element: input
                 type: number
-                label: "{{connector.github.form.incident_sampling_rate.label}}"
+                # label: "{{connector.github.form.incident_sampling_rate.label}}"
+                label: "SMAX issue sampling rate (1-60 minutes)"
                 min: 1
                 max: 60
                 step: 1
                 defaultValue: 1
-                helperText: "{{connector.github.form.incident_sampling_rate.helperText}}"
+                # helperText: "{{connector.github.form.incident_sampling_rate.helperText}}"
+                helperText: "The frequency at which data is sampled for SMAX issues (in minutes). The default value is 1."
                 apiMapping: connection_config.issueSamplingRate
                 formStep: collectTickets
                 isRequired: true
@@ -255,9 +259,12 @@ spec:
       - id: mappings
         element: input
         type: emailJsonata
-        headerLabel: "{{connector.github.form.mappings.message}}"
+        # headerLabel: "{{connector.github.form.mappings.message}}"
+        headerLabel: |
+          Here, you can customize the mapping of incident details to the SMAX data record. You can use the default issue template as-is, or customize it to include different information.
         headerLabelLink: https://ibm.biz/int-tickettemplate
-        label:  "{{connector.github.form.mappings.label}}"
+        # label:  "{{connector.github.form.mappings.label}}"
+        label: "Incident created SMAX issue record template"
         isRequired: true
         apiMapping: connection_config.mappings
         formStep: fieldMapping
