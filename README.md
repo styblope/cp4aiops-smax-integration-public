@@ -9,5 +9,5 @@ oc create -f bundlemanifest.yaml -n cp4aiops
 Ensure the deployed BundleManifest is running:
 ```bash
 oc get bundlemanifest | grep smax
-ticket-template                 Configured
+smax                 Configured
 ```
