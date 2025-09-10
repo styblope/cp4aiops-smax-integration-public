@@ -34,6 +34,7 @@ spec:
     allOf:
       - required:
           - url
+          - token
           - username
           - password
     properties:
@@ -77,7 +78,7 @@ spec:
         type: string
     type: object
   uiSchema:
-    type: smax 
+    type: smax
     displayName: "SMAX Integration"
     iconFileType: png 
     iconFileSize: 96
@@ -146,6 +147,7 @@ spec:
         element: input
         type: text
         label: "SMAX Base URL"
+        placeholder: "e.g. https://newsmax.combis.hr"
         helperText: "{{common.egress_warning}}"
         apiMapping: connection_config.url
         formStep: addConnection
@@ -155,7 +157,7 @@ spec:
         element: input
         type: text
         label: "Tenant ID"
-        helperText: "Enter the SMAX tenant ID"
+        placeholder: "Enter the SMAX tenant ID"
         apiMapping: connection_config.tenant
         formStep: addConnection
         isRequired: true
@@ -171,7 +173,7 @@ spec:
         element: input
         type: password
         label: "{{connector.common.form.password.label}}"
-        helperText: "{{connector.common.form.password.placeholder}}"
+        placeholder: "{{connector.common.form.password.placeholder}}"
         apiMapping: connection_config.password
         formStep: addConnection
         isRequired: true
