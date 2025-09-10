@@ -88,12 +88,17 @@ spec:
     apiAdaptor: grpc
     datasourceType: tickets
     sidePanelTitle: "Configuring SMAX integration"
-    sidePanelDescription: "{{connector.servicenow.sidepanel.description}}"
+    # sidePanelDescription: "{{connector.servicenow.sidepanel.description}}"
+    sidePanelDescription: |
+      A ServiceNow integration collects historical and live data for change requests, incidents, and problems. These can be used to calculate change risk scores and updates them in the ServiceNow interface. There is also a ServiceNow integration that publishes incidents along with the notifications to your ChatOps interface.
     sidePanelInfoHeader: "{{sidePanel.information.header}}"
     sidePanelInfo:
       - "{{common.egress_warning}}"
-      - "{{sidePanel.information.servicenow.1}}"
-      - "{{sidePanel.information.servicenow.2}}"
+      # - "{{sidePanel.information.servicenow.1}}"
+      # - "{{sidePanel.information.servicenow.2}}"
+      - "SMAX service URL"
+      - "Tenant ID"
+      - "User ID and password credentials"
     hasOptionalConfig: true
     sidePanelOptionalConfigHeader: "{{sidePanel.optional.config.header}}"
     sidePanelOptionalConfigList:
