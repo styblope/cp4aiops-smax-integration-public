@@ -1,5 +1,8 @@
 Deploy integration:
 ```bash
+git clone https://github.com/styblope/cp4aiops-smax-integration-public.git
+cd cp4aiops-smax-integration-public
+
 oc create -f bundlemanifest.yaml -n cp4aiops
 ```
 
