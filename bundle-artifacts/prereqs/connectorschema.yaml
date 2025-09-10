@@ -92,7 +92,7 @@ spec:
     sidePanelTitle: "Configuring SMAX integration"
     # sidePanelDescription: "{{connector.servicenow.sidepanel.description}}"
     sidePanelDescription: |
-      The integration publishes incidents from Cloud Pak for AIOps to SMAX (OpenText Service Management) and keeps their lifecycle and related data synchronized. The SMAX integration also collects both historical and real-time data on change requests, incidents, and problems. This information can then be used to calculate change risk scores.
+      The integration translates incidents from Cloud Pak for AIOps to SMAX (OpenText Service Management) records and keeps their lifecycle and mapped data synchronized. The SMAX integration also collects both historical and real-time data on change requests and incidents. This information can then be used to to discover details about similar tickets and calculate change risk scores.
     sidePanelInfoHeader: "{{sidePanel.information.header}}"
     sidePanelInfo:
       - "{{common.egress_warning}}"
