@@ -34,7 +34,7 @@ spec:
     allOf:
       - required:
           - url
-          - token
+          - tenant
           - username
           - password
     properties:
@@ -44,6 +44,8 @@ spec:
       types: # Don't change this as this is required and might have an impact
         type: string
       url:
+        type: string
+      tenant:
         type: string
       username:
         type: string
