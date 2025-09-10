@@ -4,13 +4,13 @@ metadata:
   name: java-grpc-conn-template
   annotations:
     connectors.aiops.ibm.com/cert-create-enabled: "true"
-    service.beta.openshift.io/serving-cert-secret-name: ticket-template
+    service.beta.openshift.io/serving-cert-secret-name: smax
   labels:
-    app: ticket-template
+    app: smax
     instance: connector
 spec:
   selector:
-    app: ticket-template
+    app: smax
     instance: connector
   ports:
     - protocol: TCP

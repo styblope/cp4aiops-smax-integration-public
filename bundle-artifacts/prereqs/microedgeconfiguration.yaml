@@ -1,6 +1,6 @@
 apiVersion: connectors.aiops.ibm.com/v1beta1
 kind: MicroEdgeConfiguration
 metadata:
-  name: ticket-template
+  name: smax
 spec:
-  image: ticket-template
+  image: smax

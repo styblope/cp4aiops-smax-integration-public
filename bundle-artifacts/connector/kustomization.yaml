@@ -12,8 +12,8 @@ configurations:
   - varreference.yaml
 
 images:
-  - name: ticket-template
-    newName: docker.io/styblope/connector-ticket-template
+  - name: smax
+    newName: ghcr.io/styblope/cp4aiops-smax-integration
     newTag: latest
 
 vars:

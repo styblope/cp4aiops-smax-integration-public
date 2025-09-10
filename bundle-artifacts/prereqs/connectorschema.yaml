@@ -1,7 +1,7 @@
 apiVersion: connectors.aiops.ibm.com/v1beta1
 kind: ConnectorSchema
 metadata:
-  name: ticket-template
+  name: smax
   labels:
     aiops-connector-category-ticketing: "true" # For integration to appear under Ticketing section in policy. Use notifications-connector: "true" instead for it to be under Notifications. 
 spec:
@@ -77,16 +77,16 @@ spec:
         type: string
     type: object
   uiSchema:
-    type: ticket-template # change this to the integration that you are adding.
-    displayName: "Ticket Template" # change this to the integration that you are adding.
+    type: smax 
+    displayName: "SMAX Integration"
     iconFileType: png 
     iconFileSize: 96
     categories: 
       - "{{connector.common.category.notifications}}"
-    url: https://ibm.biz/int-tickettemplate
+    url: https://ibm.biz/int-smax
     apiAdaptor: grpc
     datasourceType: tickets
-    sidePanelTitle: "Configuring a Ticket template integration"
+    sidePanelTitle: "Configuring SMAX integration"
     sidePanelDescription: "{{connector.servicenow.sidepanel.description}}"
     sidePanelInfoHeader: "{{sidePanel.information.header}}"
     sidePanelInfo:
@@ -287,3 +287,7 @@ spec:
                 "IsDeleted": false
               }
           })
+
+
+
+
