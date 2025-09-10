@@ -90,7 +90,7 @@ spec:
     sidePanelTitle: "Configuring SMAX integration"
     # sidePanelDescription: "{{connector.servicenow.sidepanel.description}}"
     sidePanelDescription: |
-      A ServiceNow integration collects historical and live data for change requests, incidents, and problems. These can be used to calculate change risk scores and updates them in the ServiceNow interface. There is also a ServiceNow integration that publishes incidents along with the notifications to your ChatOps interface.
+      The integration publishes incidents from Cloud Pak for AIOps to SMAX (OpenText Service Management) and keeps their lifecycle and related data synchronized. The SMAX integration also collects both historical and real-time data on change requests, incidents, and problems. This information can then be used to calculate change risk scores.
     sidePanelInfoHeader: "{{sidePanel.information.header}}"
     sidePanelInfo:
       - "{{common.egress_warning}}"
