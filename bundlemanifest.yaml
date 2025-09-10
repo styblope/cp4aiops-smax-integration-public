@@ -6,18 +6,12 @@ spec:
   prereqs:
     repo: https://github.com/styblope/cp4aiops-smax-integration-public
     branch: main
-    authSecret:
-      name: test-utilities-github-token
-    components:
       - name: deployment
         path: /bundle-artifacts/prereqs
         type: kustomize
   instanced:
     repo: https://github.com/styblope/cp4aiops-smax-integration-public
     branch: main
-    authSecret:
-      name: test-utilities-github-token
-    components:
       - name: connector
         path: /bundle-artifacts/connector
         type: kustomize
